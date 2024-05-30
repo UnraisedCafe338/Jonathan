@@ -19,6 +19,7 @@
             margin-top: -10px;
             width: 1486px;
             position: fixed;
+            z-index: 10;
         }
         body {
             margin-left: -10px;
@@ -96,13 +97,15 @@
         }
 
         .body-content {
-            background: url('images/body_background.png');
+            background: url('images/projects_background1.png');
             background-size: cover;
             padding-top: 200px;
             margin-left: 10px;
             width: 1518px;
             height: 600px;
             z-index: 2;
+            border-bottom: 5px solid white;
+            color: aliceblue;
         }
 
         .body-content h1 {
@@ -143,18 +146,21 @@
         }
 
         .about-me {
-            background-color: lightskyblue;
+            background: url('images/background-neon.gif');
             background-size: cover;
             margin-top: 190px;
             margin-left: -10px;
             width: 1529px;
             height: 750px;
             z-index: -10;
+            color: aliceblue;
         }
 
         .about-me h2 {
             font-size: 2em;
             padding-top: 200px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+          
         }
 
         .about-me h2,
@@ -163,13 +169,15 @@
         }
 
         .projects {
-            background: url('images/projects_background1.png');
+            background: url('images/background-neon.gif');
+
             background-size: cover;
             margin-top: 650px;
             width: 1529px;
             height: 900px;
             z-index: -10;
             color: aliceblue;
+            
         }
 
         .projects h2 {
@@ -208,29 +216,33 @@
             margin-bottom: 10px;
         }
 
-        .projects .thumbnail:hover .rts{
+        .projects .thumbnail:hover .rts {
             transform: scale(1.2);
         }
-        .projects .thumbnail:hover .minecraft-logo{
+
+        .projects .thumbnail:hover .minecraft-logo {
             transform: scale(1.2);
         }
-        .projects .thumbnail:hover .school{
+
+        .projects .thumbnail:hover .school {
             transform: scale(1.2);
         }
+
         .projects .description {
             margin-top: 10px;
             font-size: 1em;
         }
-        .myskills ul{
+
+        .myskills ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            
         }
-        .myskills li{
+
+        .myskills li {
             margin: 0 15px;
             text-align: center;
             padding: 15px 15px;
@@ -243,14 +255,15 @@
             cursor: pointer;
             width: 100px;
             transition: background-color 0.3s, transform 0.3s;
-            
         }
-        .myskills li:hover{
+
+        .myskills li:hover {
             background-color: rgba(25, 128, 255, 0.485);
             transform: scale(1.1);
         }
+
         .contacts {
-            background: url('images/projects_background.png');
+            background: url('images/projects_background1.png');
             background-size: cover;
             margin-top: -20px;
             width: 1529px;
@@ -258,18 +271,64 @@
             z-index: -10;
             color: aliceblue;
         }
-        .contacts h2{
+
+        .contacts h2 {
             text-align: center;
             padding-top: 30px;
         }
-        .contacts ul{
+
+        .contacts ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display:list-item;
+            display: list-item;
             justify-content: center;
-            flex-wrap:nowrap;
+            flex-wrap: nowrap;
             margin-left: 600px;
+        }
+
+        .about-me .about::after {
+            content: "";
+            position: absolute;
+            bottom: -250px;
+            left: 750px;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 5px;
+            border: 2px solid rgb(125, 186, 206);
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+        }
+        h2 {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            
+        }
+        .project-text::after {
+            content: "";
+            position: absolute;
+            bottom: -885px;
+            left: 750px;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 5px;
+            border: 2px solid rgb(125, 186, 206);
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+        }
+        .contact-text::after {
+            content: "";
+            position: absolute;
+            bottom: -1705px;
+            left: 750px;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 5px;
+            border: 2px solid rgb(125, 186, 206);
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -286,7 +345,6 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contacts">Contacts</a></li>
-
         </ul>
     </div>
     <div class="body-content">
@@ -301,7 +359,7 @@
             </div>
         </div>
         <div id="about" class="about-me">
-            <h2>About Me</h2>
+            <h2 class="about">About Me</h2>
             <p>Hello! I'm Jonathan Carlos Olano from BSIS - PROVA of EXACT Colleges of Asia, a college student that is willing<br> to learn and discover new things more about programming and improving my skills more. <br>Proficient in HTML, CSS, and JavaScript, I excel at transforming intricate problems into streamlined solutions.<br> Outside of coding, I also enjoy making mods for games such as Rusted Warfare and Minecraft with some simple codings.</p>
             <div class="myskills">
                 <br><br><br><h3>My Skills:</h3>
@@ -312,13 +370,11 @@
                     <li>MySQL</li>
                     <li>C++</li>
                 </ul>
-                
             </div>
         </div>
-        
     </div>
     <div id="projects" class="projects">
-        <h2>Projects</h2>
+        <h2 class="project-text">Projects</h2>
         <ul>
             <li>
                 <div class="thumbnail">
@@ -326,7 +382,7 @@
                         <img src="images/projects-icon.png" alt="School" class="school">
                     </a>
                     <div class="description">
-                        <h3>» School Porjects «</h3>
+                        <h3>» School Projects «</h3>
                         <p> ⇛ These are some of my school projects I made</p>
                     </div>
                 </div>
@@ -350,40 +406,34 @@
                     </a>
                     <div class="description">
                         <h3>» Rusted Warfare Mods «</h3>
-                        <p> ⇛ These are some of my Rusted Warfare mod projects that I successfully published<br> and shared to Rusted Warfare community.
-                        </div>
+                        <p> ⇛ These are some of my Rusted Warfare mod projects that I successfully published<br> and shared to Rusted Warfare community.</p>
                     </div>
-                </li>
-            </ul>
-        </div>
+                </div>
+            </li>
+        </ul>
+    </div>
     <div id="contacts" class="contacts">
-        <h2>Contacts</h2>
+        <h2 class="contact-text">Contacts</h2>
         <ul>
             <br><li>⇒ <i class="fab fa-discord"></i> MetaKnight03#2063<br></li>
             <br><li>⇒ <i class="fas fa-phone"></i> +639301697008</li>
             <br><li>⇒ <i class="fas fa-envelope"></i> olanojonathan032604@gmail.com<br></li>
-
-
         </ul>
     </div>
+    <script>
+        document.querySelector('.top-buttons li:nth-child(2) a').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+        });
 
-
-            
-        <script>
-            document.querySelector('.top-buttons li:nth-child(2) a').addEventListener('click', function(event) {
-                event.preventDefault();
-                document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
-            });
-    
-            document.querySelector('.top-buttons li:nth-child(3) a').addEventListener('click', function(event) {
-                event.preventDefault();
-                document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
-            });
-            document.querySelector('.top-buttons li:nth-child(4) a').addEventListener('click', function(event) {
-                event.preventDefault();
-                document.querySelector('#contacts').scrollIntoView({ behavior: 'smooth' });
-            });
-        </script>
-    </body>
-    </html>
-    
+        document.querySelector('.top-buttons li:nth-child(3) a').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.querySelector('.top-buttons li:nth-child(4) a').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#contacts').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
